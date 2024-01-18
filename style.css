@@ -11,7 +11,7 @@
   --regular: 300 1em "Roboto", sans-serif;
 }
 body {
-  background: center / cover no-repeat url(./Assets/background.avif);
+  background: fixed center / cover no-repeat url(./Assets/background.avif);
   color: var(--fg);
   font: var(--regular);
 }
@@ -135,17 +135,20 @@ h2 {
   -ms-border-radius: 2em;
   -o-border-radius: 2em;
 }
-/* HOME */
-.home {
+/* SECTIONS */
+section {
   display: flex;
-  flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-size: 3em;
-  padding: 10%;
   text-align: center;
   gap: 1rem;
+  padding: 10%;
+  flex-flow: column nowrap;
+}
+/* HOME */
+.home {
+  font-size: 3em;
 }
 .home .button-wrap {
   display: flex;
@@ -169,4 +172,59 @@ h2 {
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
+}
+/* ABOUT */
+.about {
+  background: linear-gradient(transparent, var(--bg));
+  font-size: 2em;
+}
+.about-text {
+  width: 100%;
+  padding: 0 10%;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
+}
+/* DETAILS */
+.details {
+  background: var(--bg);
+}
+.details-text {
+  width: 100%;
+  height: 80%;
+  border-radius: 2em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box, linear-gradient(45deg, var(--pc), var(--pc2)) border-box;
+  border: 2px solid transparent;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+}
+.details-num {
+  font: var(--heading);
+}
+/* FAQS */
+.faqs {
+  align-items: stretch;
+  background: linear-gradient(var(--bg), transparent);
+  font-size: 2em;
+  gap: 1em;
+  padding: 10% 20%;
+}
+.faq {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+/* FOOTER */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 2% 10%;
 }
