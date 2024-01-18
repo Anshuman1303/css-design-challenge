@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  /* COLOR */
+  --bg: #000;
+  --fg: #fff;
+  --pc: #1f93ff;
+  --pc2: #5800cb;
+  /* FONTS */
+  --heading: 400 2em "Montserrat", sans-serif;
+  --heading2: 100 2em "Montserrat", sans-serif;
+  --regular: 300 1em "Roboto", sans-serif;
+}
+body {
+  background: center / cover no-repeat url(./Assets/background.avif);
+  color: var(--fg);
+  font: var(--regular);
+}
+h1 {
+  font: var(--heading);
+}
+h2 {
+  font: var(--2);
+}
+/* UTILITY CLASSES */
+.pri-col {
+  color: var(--pc);
+}
+.hover-underline {
+  position: relative;
+}
+.hover-underline::after {
+  content: "";
+  width: 110%;
+  height: 1px;
+  background: var(--fg);
+  position: absolute;
+  bottom: -2px;
+  left: -5%;
+  transition: transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  -moz-transition: transform 150ms ease-in-out;
+  -ms-transition: transform 150ms ease-in-out;
+  -o-transition: transform 150ms ease-in-out;
+  transform-origin: right;
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+}
+.parent-hover-underline:hover .hover-underline::after {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform-origin: left;
+}
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 58px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2em;
+  padding: 0 1em;
+}
+.nav-head {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav-head img {
+  height: 58px;
+}
+.nav-list {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 100%;
+  gap: 3em;
+}
+.nav-account {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 0.5em;
+}
+.nav-account .icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  background-color: var(--fg);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transition: transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  -moz-transition: transform 150ms ease-in-out;
+  -ms-transition: transform 150ms ease-in-out;
+  -o-transition: transform 150ms ease-in-out;
+}
+.nav-account:hover .icon {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+/* BUTTON */
+.border-button {
+  background: linear-gradient(var(--bg), var(--bg)) padding-box, linear-gradient(45deg, var(--pc), var(--pc2)) border-box;
+  border: 2px solid transparent;
+  border-radius: 2em;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+}
+/* HOME */
+.home {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 3em;
+  padding: 10%;
+  text-align: center;
+  gap: 1rem;
+}
+.home .button-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.home button {
+  padding: 1rem;
+  font: var(--regular);
+  font-size: 0.5em;
+  display: flex;
+  align-items: center;
+  transition: transform 150ms ease-in-out;
+  -webkit-transition: transform 150ms ease-in-out;
+  -moz-transition: transform 150ms ease-in-out;
+  -ms-transition: transform 150ms ease-in-out;
+  -o-transition: transform 150ms ease-in-out;
+}
+.home button:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
